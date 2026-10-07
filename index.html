@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FocusFlow | To-Do List</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Header -->
+        <header class="header">
+
+            <div>
+                <p class="small-title">MY PRODUCTIVITY</p>
+                <h1>Focus<span>Flow</span></h1>
+            </div>
+
+            <div class="date-box">
+                <p id="day">Today</p>
+                <span id="date"></span>
+            </div>
+
+        </header>
+
+
+        <!-- Progress -->
+        <section class="progress-section">
+
+            <div class="progress-info">
+                <span>Today's Progress</span>
+                <strong id="progressText">0%</strong>
+            </div>
+
+            <div class="progress-bar">
+                <div id="progressFill"></div>
+            </div>
+
+        </section>
+
+
+        <!-- Add Task -->
+        <section class="add-task">
+
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="What do you want to accomplish?"
+                autocomplete="off"
+            >
+
+            <button id="addBtn">
+                + Add Task
+            </button>
+
+        </section>
+
+
+        <!-- Filters -->
+        <div class="filters">
+
+            <button class="filter active" data-filter="all">
+                All
+            </button>
+
+            <button class="filter" data-filter="active">
+                Active
+            </button>
+
+            <button class="filter" data-filter="completed">
+                Completed
+            </button>
+
+        </div>
+
+
+        <!-- Task List -->
+        <main>
+
+            <ul id="taskList"></ul>
+
+            <div id="emptyMessage" class="empty-message">
+
+                <div class="empty-icon">✓</div>
+
+                <h3>You're all caught up!</h3>
+
+                <p>Add a task and start making progress.</p>
+
+            </div>
+
+        </main>
+
+
+        <!-- Bottom -->
+        <footer class="footer">
+
+            <p>
+                <span id="taskCount">0</span> tasks remaining
+            </p>
+
+            <button id="clearCompleted">
+                Clear Completed
+            </button>
+
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
